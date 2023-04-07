@@ -1,0 +1,68 @@
+.search-heading {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .search-heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #262626;
+    margin-left: 200px;
+  }
+}
+
+.search-not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.search-not-found-img {
+  width: 260px;
+  height: 210px;
+}
+
+.search_not-found-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #262626;
+}
+
+.search_not-found-description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #989898;
+}
+
+@media screen and (min-width: 768px) {
+  .search-not-found-container {
+    height: 100vh;
+  }
+  .search-not-found-img {
+    width: 500px;
+    height: 410px;
+  }
+  .search_not-found-heading {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .search_not-found-description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

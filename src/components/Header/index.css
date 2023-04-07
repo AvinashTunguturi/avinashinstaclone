@@ -1,0 +1,261 @@
+@media screen and (min-width: 768px) {
+}
+
+.nav-mobile-header,
+.nav-mobile-option-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.nav-md-container {
+  max-width: 1040px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    width: 85%;
+  }
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #262626;
+}
+
+@media screen and (min-width: 768px) {
+  .home-link {
+    margin-left: 60px;
+  }
+}
+
+.header-website-logo {
+  height: 30px;
+  width: 60px;
+  /* margin-right: 12px; */
+}
+
+.website-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+}
+
+.nav-mobile-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-mobile-icon-button {
+  list-style-type: none;
+  padding: 6px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.search-button {
+  background-color: transparent;
+  border-style: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.nav-mobile-logout-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  width: 86px;
+  height: 32px;
+  border-style: none;
+  background: #4094ef;
+  border-radius: 4px;
+}
+
+.nav-mobile-close-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: transparent;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-sm-links-container {
+  width: 55px;
+}
+
+.hamburger-button {
+  background-color: transparent;
+  border-style: none;
+  padding-left: 10px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.hamburger-icon {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-mobile-container,
+  .nav-sm-links-container,
+  .nav-mobile-links-container,
+  .nav-mobile-header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-md-container {
+    display: none;
+  }
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-md-links-container {
+  display: none;
+}
+
+.nav-md-text-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-lg-link {
+  list-style-type: none;
+  margin: 0 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-lg-links-container,
+  .nav-md-links-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.search-posts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 28px;
+  left: 24px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .search-posts-container {
+    width: 214px;
+    height: 28px;
+  }
+}
+
+.search-box {
+  width: 100%;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  border-style: none;
+  outline: none;
+  color: #989898;
+  padding-left: 6px;
+}
+
+.search-icon-button {
+  width: 34px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background: #dbdbdb;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.search-icon {
+  color: #989898;
+  background-color: transparent;
+}
+
+.nav-link {
+  width: 38px;
+  height: 18px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4094ef;
+  text-decoration: none;
+}
+
+.nav-lg-logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  width: 86px;
+  height: 32px;
+  background: #4094ef;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  border-style: none;
+}

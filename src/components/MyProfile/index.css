@@ -1,0 +1,36 @@
+.profile-failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.profile-failure-img {
+  width: 260px;
+  height: 128px;
+}
+
+.profile-failure-description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-failure-container {
+    height: 100vh;
+  }
+
+  .profile-failure-img {
+    width: 560px;
+    height: 275px;
+  }
+  .profile-failure-description {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
