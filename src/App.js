@@ -19,17 +19,18 @@ class App extends Component {
   }
 
   onClickSearchButton = searchText => {
-    this.setState({
+    this.setState(prevState => ({
       searchInput: searchText,
-      searchOn: true,
-      searchOff: false,
-    })
+      searchOn: !prevState.searchOn,
+      searchOff: !prevState.searchOff,
+    }))
   }
 
   onClickRouteLink = () => {
     this.setState({
       searchOn: false,
       searchOff: true,
+      searchInput: '',
     })
   }
 
@@ -50,7 +51,7 @@ class App extends Component {
 
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/my-profile" component={MyProfile} />
-          <ProtectedRoute path="/users/:userId" component={UserProfile} />
+          <ProtectedRoute exact path="/users/:userId" component={UserProfile} />
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />
         </Switch>
@@ -58,4 +59,5 @@ class App extends Component {
     )
   }
 }
+
 export default App

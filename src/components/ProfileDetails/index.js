@@ -23,39 +23,35 @@ const ProfileDetails = props => {
   return (
     <>
       <li className="profile-details-container">
-        <h1 className="profile-name-sm">{userName}</h1>
-        <div className="image-user-details">
-          <img
-            src={profilePic}
-            alt={`${profileRoute} profile`}
-            className="profile-image"
-          />
-          <div className="user-detail-container">
-            <h1 className="profile-name-lg">{userName}</h1>
-            <div className="stats-container">
-              <div className="stat-container">
-                <p className="stat-count">{postsCount}</p>
-                <p className="stat-name">Posts</p>
+        <div className="profile-info-container">
+          <h1 className="profile-name">{userName}</h1>
+          <div className="image-user-details">
+            <img
+              src={profilePic}
+              alt={`${profileRoute} profile`}
+              className="profile-image"
+            />
+            <div className="user-detail-container">
+              <div className="stats-container">
+                <div className="stat-container">
+                  <p className="stat-count">{postsCount}</p>
+                  <p className="stat-name">Posts</p>
+                </div>
+                <div className="stat-container">
+                  <p className="stat-count">{followersCount}</p>
+                  <p className="stat-name">followers</p>
+                </div>
+                <div className="stat-container">
+                  <p className="stat-count">{followingCount}</p>
+                  <p className="stat-name">following</p>
+                </div>
               </div>
-              <div className="stat-container">
-                <p className="stat-count">{followersCount}</p>
-                <p className="stat-name">followers</p>
-              </div>
-              <div className="stat-container">
-                <p className="stat-count">{followingCount}</p>
-                <p className="stat-name">following</p>
-              </div>
-            </div>
-            <div className="bio-container-lg">
-              <p className="bio-name">{userId}</p>
-              <p className="bio">{userBio}</p>
             </div>
           </div>
-        </div>
-
-        <div className="bio-container-sm">
-          <p className="bio-name">{userId}</p>
-          <p className="bio">{userBio}</p>
+          <div className="bio-container">
+            <p className="bio-name">{userId}</p>
+            <p className="bio">{userBio}</p>
+          </div>
         </div>
 
         <ul className="user-stories">

@@ -10,14 +10,22 @@ import './index.css'
 const Home = () => (
   <SearchContext.Consumer>
     {value => {
-      const {searchInput, searchOn} = value
+      const {searchInput, searchOn, searchOff} = value
+
       return (
         <>
           <Header />
+
           <div className="bg-container">
-            {searchOn ? (
+            {searchInput !== '' && searchOn && !searchOff && (
               <SearchFunction searchInput={searchInput} />
-            ) : (
+            )}
+
+            {searchInput !== '' && !searchOn && searchOff && (
+              <SearchFunction searchInput={searchInput} />
+            )}
+
+            {searchInput === '' && (
               <>
                 <Stories />
                 <Posts />

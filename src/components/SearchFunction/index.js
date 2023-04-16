@@ -2,9 +2,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import PostItems from '../PostItems'
-// import SearchContext from '../../context/SearchContext'
 
-// import Header from '../Header'
 import './index.css'
 
 const apiSearchPostsStatus = {
@@ -29,7 +27,7 @@ class SearchFunction extends Component {
     this.setState({
       apiSearchPost: apiSearchPostsStatus.inProgress,
     })
-    console.log('Search Function')
+
     const {searchInput} = this.props
     const apiUrl = `https://apis.ccbp.in/insta-share/posts?search=${searchInput}`
     const jwtToken = Cookies.get('jwt_token')

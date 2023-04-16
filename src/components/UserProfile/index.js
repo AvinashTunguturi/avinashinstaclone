@@ -3,8 +3,8 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import ProfileDetails from '../ProfileDetails'
 import Header from '../Header'
-// import SearchContext from '../../context/SearchContext'
-// import SearchFunction from '../SearchFunction'
+import SearchContext from '../../context/SearchContext'
+import SearchFunction from '../SearchFunction'
 
 import './index.css'
 
@@ -132,38 +132,29 @@ class UserProfile extends Component {
 
   render() {
     return (
-      <>
-        <Header />
-        {this.renderAllUserProfileViews()}
-      </>
+      <SearchContext.Consumer>
+        {value => {
+          const {searchInput, searchOn, searchOff} = value
+
+          return (
+            <>
+              <Header />
+
+              {searchInput !== '' && searchOn && !searchOff && (
+                <SearchFunction searchInput={searchInput} />
+              )}
+
+              {searchInput !== '' && !searchOn && searchOff && (
+                <SearchFunction searchInput={searchInput} />
+              )}
+
+              {searchInput === '' && this.renderAllUserProfileViews()}
+            </>
+          )
+        }}
+      </SearchContext.Consumer>
     )
   }
 }
 
 export default UserProfile
-
-/*
-<>
-        <Header />
-        {this.renderAllUserProfileViews()}
-      </>
-
-      <SearchContext.Consumer>
-        {value => {
-          const {searchInput, searchOn} = value
-          return (
-            <>
-              <Header />
-              <div className="bg-container">
-                {searchOn ? (
-                  <SearchFunction searchInput={searchInput} />
-                ) : (
-                  this.renderAllUserProfileViews()
-                )}
-              </div>
-            </>
-          )
-        }}
-      </SearchContext.Consumer>
-
-*/

@@ -132,17 +132,19 @@ class MyProfile extends Component {
     return (
       <SearchContext.Consumer>
         {value => {
-          const {searchInput, searchOn} = value
+          const {searchInput, searchOn, searchOff} = value
           return (
             <>
               <Header />
-              <div className="bg-container">
-                {searchOn ? (
-                  <SearchFunction searchInput={searchInput} />
-                ) : (
-                  this.renderAllProfileViews()
-                )}
-              </div>
+              {searchInput !== '' && searchOn && !searchOff && (
+                <SearchFunction searchInput={searchInput} />
+              )}
+
+              {searchInput !== '' && !searchOn && searchOff && (
+                <SearchFunction searchInput={searchInput} />
+              )}
+
+              {searchOff && this.renderAllProfileViews()}
             </>
           )
         }}
@@ -152,29 +154,3 @@ class MyProfile extends Component {
 }
 
 export default MyProfile
-
-/*
-<>
-        <Header />
-        {this.renderAllProfileViews()}
-      </>
- 
-<SearchContext.Consumer>
-        {value => {
-          const {searchInput, searchOn} = value
-          return (
-            <>
-              <Header />
-              <div className="bg-container">
-                {searchOn ? (
-                  <SearchFunction searchInput={searchInput} />
-                ) : (
-                  this.renderAllProfileViews()
-                )}
-              </div>
-            </>
-          )
-        }}
-</SearchContext.Consumer>
-
-*/
